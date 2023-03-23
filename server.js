@@ -49,7 +49,13 @@ app.post("/", function(request, responce){
 })
 
 
-app.listen(process.env.PORT || 443);
+
+const PORT = 8080;
+const HOST = '0.0.0.0';
+
+app.listen(PORT, HOST, () => {
+  console.log(`Running on http://${HOST}:${PORT}`);
+});
 
 
 //5d527bc19e745a8b405c5c3770ae40ec-us13
